@@ -45,7 +45,7 @@ unittest: ## Run all unit tests.
 
 .PHONY: test
 test: ## Run all integrate tests.
-	cd sample && terraform plan && terraform apply
+	cd sample && terraform plan && terraform apply --auto-approve
 
 ##@ Build
 

@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	TerraformProviderName = "leryn1122/vmware-fusion"
+	TerraformProviderName = "registry.terraform.io/leryn1122/vmware-fusion"
 )
 
 func main() {
@@ -18,14 +18,12 @@ func main() {
 	flag.BoolVar(&debugMode, "debug", false, "Enable debug mode if run with debugger like `delve`")
 	flag.Parse()
 
-	err := providerserver.Serve(
-		context.Background(),
-		terraform.NewProvider,
-		providerserver.ServeOpts{
-			Address: "registry.terraform.io/" + TerraformProviderName,
-			Debug:   debugMode,
-		},
-	)
+	opts := providerserver.ServeOpts{
+		Address: TerraformProviderName,
+		Debug:   debugMode,
+	}
+
+	err := providerserver.Serve(context.Background(), terraform.NewProvider, opts)
 
 	if err != nil {
 		fmt.Println(err)

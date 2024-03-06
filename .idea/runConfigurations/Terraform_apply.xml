@@ -1,0 +1,26 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Terraform apply" type="#org.intellij.plugins.hcl.terraform.run.TerraformConfigurationType" factoryName="Terraform Apply" show_console_on_std_err="false" show_console_on_std_out="false">
+    <option name="allowRunningInParallel" value="false" />
+    <option name="envs">
+      <map>
+        <entry key="TF_LOG" value="DEBUG" />
+        <entry key="TF_REATTACH_PROVIDERS" value="{&quot;registry.terraform.io/leryn1122/vmware-fusion&quot;:{&quot;Protocol&quot;:&quot;grpc&quot;,&quot;ProtocolVersion&quot;:6,&quot;Pid&quot;:69128,&quot;Test&quot;:true,&quot;Addr&quot;:{&quot;Network&quot;:&quot;unix&quot;,&quot;String&quot;:&quot;/var/folders/_n/54mn56zj01g6t2n4935xqndc0000gn/T/plugin2460587824&quot;}}}" />
+      </map>
+    </option>
+    <option name="passParentEnvs" value="true" />
+    <option name="programParameters" value="apply --auto-approve" />
+    <option name="projectPathOnTarget" />
+    <option name="selectedOptions">
+      <list />
+    </option>
+    <option name="workingDirectory" value="$PROJECT_DIR$/sample" />
+    <option name="PROGRAM_PARAMETERS" value="apply --auto-approve" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/sample" />
+    <option name="PASS_PARENT_ENVS" value="true" />
+    <envs>
+      <env name="TF_LOG" value="DEBUG" />
+      <env name="TF_REATTACH_PROVIDERS" value="{}" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>
